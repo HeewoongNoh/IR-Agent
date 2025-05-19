@@ -5,21 +5,21 @@ Spectral analysis provides crucial clues for the elucidation of unknown material
 
 
 ### Overall Framework of IR-Agent
-![Overall Framework of IR-Agent](https://github.com/user-attachments/assets/91d37ce7-bceb-47ac-8dc4-cd377724472e)
+![Overall Framework of IR-Agent](https://github.com/user-attachments/assets/91d37ce7-bceb-47ac-8dc4-cd377724472e)  
 
 
 ### Dataset
 Due to file size and copyright restrictions, we provide the code for data downloading and preprocessing, including the NIST IDs used in our dataset and the data split indices.
 
-`dataset_utils/download_data.py`: Code for Preprocessing IR Data
-`dataset_utils/preprocess_data.py`: Code for Downloading IR Data
-`dataset_utils/random_split.py`: Code for Random Splitting of IR Data
-`dataset_utils/peak_dict.py`: Peak Wavenumbers in IR Data
+`dataset_utils/download_data.py`: Code for Preprocessing IR Data  
+`dataset_utils/preprocess_data.py`: Code for Downloading IR Data  
+`dataset_utils/random_split.py`: Code for Random Splitting of IR Data  
+`dataset_utils/peak_dict.py`: Peak Wavenumbers in IR Data  
 
 ### Run IR-Agent
-`run_multi_agent_ir.py`: Main Code for Running IR-Agent 
+`run_multi_agent_ir.py`: Main Code for Running IR-Agent    
 
 
 ### Tools
-`models/translator.py`: Translator model for generating candidiate SMILES
-`utils_table.py`: IR peak table assigner & IR absorption table
+`models/translator.py`: Translator model for generating candidiate SMILES  
+`utils_table.py`: IR peak table assigner & IR absorption table  
