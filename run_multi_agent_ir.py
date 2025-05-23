@@ -256,7 +256,7 @@ IR Spectrum Retriever Agent Output (high-similarity spectra & analysis):
 
 1) Identify the substructures that are common to both the IR table interpretation and at least one SMILES in the list.
 
-2) From the Retriever output, extract structural information (e.g., recurring motifs / scaffolds) suggested by high-similarity candidates.  
+2) From the retriever agent output, extract structural information (e.g., recurring motifs / scaffolds) suggested by high-similarity candidates.  
 
 3) Guided by the structural insights from steps 1 and 2, produce a refined Top-{args.N} list of SMILES candidates.
 
