@@ -15,10 +15,10 @@ Due to file size and copyright restrictions, we provide the code for data downlo
 `dataset_utils/preprocess_data.py`: Code for Downloading IR Data  
 `dataset_utils/random_split.py`: Code for Random Splitting of IR Data  
 `dataset_utils/peak_dict.py`: Peak Wavenumbers in IR Data  
+`dataset_utils/nist_id_dict.json`: NIST IDs of the Datasets
 
 ### Run IR-Agent
 `run_multi_agent_ir.py`: Main Code for Running IR-Agent    
-
 
 ### Tools
 `models/translator.py`: Translator model for generating candidiate SMILES  
