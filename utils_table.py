@@ -76,31 +76,28 @@ def calculate_tanimoto(smiles_a, smiles_b):
         return None
 
 def read_table(wavenumber, ir_spectrum_table):
+    matches = []
     for (lower, upper), group in ir_spectrum_table.items():
-        if lower >= wavenumber >= upper: 
-            return (lower, upper), group
-    return None, None 
-
+        if lower >= wavenumber >= upper:
+            matches.append(((lower, upper), group))
+    return matches 
 
 
 def interpret_table(peaks, ir_spectrum_table):
-    group_dicts = dict()
+    group_dicts = []
     for wn in peaks:
-        range, group = read_table(wn, ir_spectrum_table)
-        if group is not None:
-            group_dicts[range] = group
-        else:
-            continue 
-      
+        matches = read_table(wn, ir_spectrum_table)
+        if not matches:
+            continue
+        for (range_, group) in matches:
+            group_dicts.append((range_, group))
+
+    if not group_dicts:
+        return "No assigned functional group"
+
     table_text = ""
-    if len(group_dicts) == 0:
-
-        table_text += "No assigned functional group"
-
-    else:
-        for wave_ranges, assigned_fg in group_dicts.items():
-            table_text += "Peaks observed between " + str(wave_ranges) + "cm⁻¹ " + "are typically associated with "+ assigned_fg + ". " + "\n"
-
+    for wave_range, fg in group_dicts:
+        table_text += f"Peak near {wave_range} cm⁻¹ is associated with {fg}.\n"
     return table_text
 
 
