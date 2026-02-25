@@ -11,7 +11,7 @@ Spectral analysis provides crucial clues for the elucidation of unknown material
 
 
 ### Overall Framework of IR-Agent
-![Overall Framework of IR-Agent](./dataset_utils/model_framework_png.png)  
+![Overall Framework of IR-Agent](./dataset_utils/model_architecture_png.png)  
 
 
 ### Dataset
